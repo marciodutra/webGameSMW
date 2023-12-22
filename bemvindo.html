@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/css/style-bemvindo.css" />
+    <title>Bem vindo - Super Mario World Web Game</title>
+  </head>
+
+  <body>
+    <audio id="pressstart">
+      <source src="/soundtracks/coin.wav" type="audio/wav" />
+    </audio>
+    <audio autoplay class="welcome">
+      <source src="/soundtracks/welcome.mp3" type="audio/mp3" />
+    </audio>
+
+    <nav id="menu">
+      <a href="/index.html"
+        ><img src="/images/logo.png" class="logo" alt="Logo"
+      /></a>
+      <ul>
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+        <li><a href="/contato.html">Contato</a></li>
+        <li><a href="/informacoes.html">Info</a></li>
+        <li><a href="/comojogar.html">Como Jogar</a></li>
+        <li><a href="/desenvolvidor.html">Area do Desenvolvidor</a></li>
+      </ul>
+    </nav>
+
+    <div id="container-welcome">
+      <div class="texto">
+        <p>
+          Bem-vindo! Esta e a Terra dos Dinossauros. Nesta terra estranha,
+          descobrimos que a Princesa Toadstool esta desaparecida novamente!
+          Parece que Bowser esta de volta!
+        </p>
+      </div>
+      <a href="#" class="startplayer">Continuar para Jogar</a>
+    </div>
+
+    <script src="/js/bemvindo.js" defer></script>
+  </body>
+</html>

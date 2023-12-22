@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/css/style-betaboss.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <title>Game - Super Mario World Web Game</title>
+  </head>
+
+  <body>
+    <audio class="colision-kick">
+      <source src="/soundtracks/kick.wav" type="audio/wav" />
+    </audio>
+    <audio class="powerdown">
+      <source src="/soundtracks/pipe.wav" type="audio/wav" />
+    </audio>
+    <audio class="coins-up">
+      <source src="/soundtracks/coin.wav" type="audio/wav" />
+    </audio>
+    <audio class="playerdown">
+      <source src="/soundtracks/playerdown.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="featherget">
+      <source src="/soundtracks/featherget.wav" type="audio/wav" />
+    </audio>
+    <audio class="yoshi-coin">
+      <source src="/soundtracks/yoshicoin.wav" type="audio/wav" />
+    </audio>
+    <audio class="invencivel">
+      <source src="/soundtracks/invincible.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="extra-life">
+      <source src="/soundtracks/extraup.wav" type="audio/wav" />
+    </audio>
+    <audio class="power-extra">
+      <source src="/soundtracks/powerup.wav" type="audio/wav" />
+    </audio>
+    <audio src="/soundtracks/jump.wav" class="jump-sound"></audio>
+    <audio class="sound-mario-voando">
+      <source src="/soundtracks/caperise.wav" type="audio/wav" />
+    </audio>
+    <audio loop class="overworld">
+      <source src="/soundtracks/overworld.mp3" type="audio/mp3" />
+    </audio>
+    <audio loop class="bossmusic">
+      <source src="/soundtracks/bowserslastattack.mp3" type="audio/mp3" />
+    </audio>
+    <audio loop class="bossmusica">
+      <source src="/soundtracks/bowserslastattackfaster.mp3" type="audio/mp3" />
+    </audio>
+    <audio autoplay loop class="waiting">
+      <source src="/soundtracks/wanderingthellains.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="hurry-up">
+      <source src="/soundtracks/hurryup.wav" type="audio/wav" />
+    </audio>
+    <audio loop class="overworldhurry">
+      <source src="/soundtracks/overworldhurry.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="missionend">
+      <source src="/soundtracks/courseclear.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="missionendcontinue">
+      <source src="/soundtracks/fadeout.mp3" type="audio/mp3" />
+    </audio>
+
+    <nav id="menu">
+      <a href="/index.html"
+        ><img src="/images/logo.png" class="logo" alt="Logo"
+      /></a>
+      <ul>
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+        <li><a href="/contato.html">Contato</a></li>
+        <li><a href="/informacoes.html">Info</a></li>
+        <li><a href="/comojogar.html">Como Jogar</a></li>
+        <li><a href="/desenvolvidor.html">Area do Desenvolvidor</a></li>
+      </ul>
+    </nav>
+
+    <div id="container-game">
+      <div id="botao">
+        <button type="button">Iniciar Boss</button>
+      </div>
+      <div class="menuitens">
+        <img
+          src="/images/curseclearmarionew.png"
+          class="cursemario"
+          alt="Contagem Game Itens Mario"
+        />
+        <div class="timer">300</div>
+        <span class="life">1</span>
+        <span class="moedasup">0</span>
+        <span class="yoshiup">0</span>
+        <span class="points">0</span>
+        <span class="checkpointclear">0</span>
+      </div>
+
+      <div class="gameovertimeup">
+        <img class="left-image" src="/images/GAME.png" alt="Imagem do game" />
+        <img class="right-image" src="/images/OVER.png" alt="Imagem de over" />
+        <img
+          class="timeup-left-image"
+          src="/images/TIME.png"
+          alt="Imagem do TIME"
+        />
+        <img
+          class="timeup-right-image"
+          src="/images/UP.png"
+          alt="Imagem de UP"
+        />
+      </div>
+
+      <img
+        src="/images/cenarioboss.png"
+        class="cenarioboss"
+        alt="Cenario Boss"
+      />
+      <img src="/images/mariosmall.png" class="mario" alt="Mario" />
+      <img src="/images/bosb.gif" class="boss" alt="Chefe" />
+      <img src="/images/bossaRight.gif" class="bossaRight" alt="Chefinho">
+      <img src="/images/bossaLeft.gif" class="bossaLeft" alt="Chefinho">
+      <img
+        src="/images/rouletteblock.gif"
+        class="rouletteblock"
+        alt="Todos os poderes"
+      />
+    </div>
+
+    <div id="container-game-footer">
+      <p>
+        Game Desenvolvido por <span>Johnny Peffer</span> para mais informacoes
+        acesse o
+        <a href="https://www.youtube.com/@johnnypefferoficial/" target="_blank"
+          >Canal do Youtube Oficial</a
+        >
+      </p>
+    </div>
+
+    <script src="/js/betaboss.js" defer></script>
+  </body>
+</html>

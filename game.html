@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Johnny Peffer Oficial">
+    <link rel="stylesheet" type="text/css" href="/css/style-game.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <title>Game - Super Mario World Web Game</title>
+  </head>
+
+  <body>
+    <audio class="colision-kick">
+      <source src="/soundtracks/kick.wav" type="audio/wav" />
+    </audio>
+    <audio class="powerdown">
+      <source src="/soundtracks/pipe.wav" type="audio/wav" />
+    </audio>
+    <audio class="coins-up">
+      <source src="/soundtracks/coin.wav" type="audio/wav" />
+    </audio>
+    <audio class="playerdown">
+      <source src="/soundtracks/playerdown.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="featherget">
+      <source src="/soundtracks/featherget.wav" type="audio/wav" />
+    </audio>
+    <audio class="yoshi-coin">
+      <source src="/soundtracks/yoshicoin.wav" type="audio/wav" />
+    </audio>
+    <audio class="invencivel">
+      <source src="/soundtracks/invincible.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="extra-life">
+      <source src="/soundtracks/extraup.wav" type="audio/wav" />
+    </audio>
+    <audio class="power-extra">
+      <source src="/soundtracks/powerup.wav" type="audio/wav" />
+    </audio>
+    <audio src="/soundtracks/jump.wav" class="jump-sound"></audio>
+    <audio class="sound-mario-voando">
+      <source src="/soundtracks/caperise.wav" type="audio/wav" />
+    </audio>
+    <audio loop class="overworld">
+      <source src="/soundtracks/overworld.mp3" type="audio/mp3" />
+    </audio>
+    <audio autoplay loop class="waiting">
+      <source src="/soundtracks/wanderingthellains.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="hurry-up">
+      <source src="/soundtracks/hurryup.wav" type="audio/wav" />
+    </audio>
+    <audio loop class="overworldhurry">
+      <source src="/soundtracks/overworldhurry.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="missionend">
+      <source src="/soundtracks/courseclear.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="missionendcontinue">
+      <source src="/soundtracks/fadeout.mp3" type="audio/mp3" />
+    </audio>
+
+    <nav id="menu">
+      <a href="/index.html"
+        ><img src="/images/logo.png" class="logo" alt="Logo"
+      /></a>
+      <ul>
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+        <li><a href="/contato.html">Contato</a></li>
+        <li><a href="/informacoes.html">Info</a></li>
+        <li><a href="/comojogar.html">Como Jogar</a></li>
+        <li><a href="/desenvolvidor.html">Area do Desenvolvidor</a></li>
+      </ul>
+    </nav>
+
+    <div id="container-game">
+      <div id="botao">
+        <button type="button">Iniciar Jogo</button>
+      </div>
+
+      <div class="menuitens">
+        <img
+          src="/images/curseclearmarionew.png"
+          class="cursemario"
+          alt="Contagem Game Itens Mario"
+        />
+        <div class="timer">300</div>
+        <span class="life">5</span>
+        <span class="moedasup">0</span>
+        <span class="yoshiup">0</span>
+        <span class="points">0</span>
+        <span class="checkpointclear">0</span>
+      </div>
+
+      <div class="gameovertimeup">
+        <img class="left-image" src="/images/GAME.png" alt="Imagem do game" />
+        <img class="right-image" src="/images/OVER.png" alt="Imagem de over" />
+        <img
+          class="timeup-left-image"
+          src="/images/TIME.png"
+          alt="Imagem do TIME"
+        />
+        <img
+          class="timeup-right-image"
+          src="/images/UP.png"
+          alt="Imagem de UP"
+        />
+      </div>
+
+      <img src="/images/mariosmall.png" class="mario" alt="Mario Pequeno" />
+      <img
+        src="/images/mario-voando.gif"
+        class="mario-voando"
+        alt="Mario Voando"
+      />
+      <img src="/images/1-up.png" class="extra-up" alt="Vida Extra" />
+      <img src="/images/power-up.png" class="power-up" alt="Cogumelo" />
+      <img src="/images/flower.gif" class="flower" alt="Flower" />
+      <img src="/images/star.gif" class="star" alt="Estrela" />
+      <img src="/images/feather.png" class="feather" alt="Peninha" />
+      <img
+        src="/images/rouletteblock.gif"
+        class="rouletteblock"
+        alt="Todos Poderes"
+      />
+      <img src="/images/bgne.png" class="senario" alt="Cenario" />
+      <img src="/images/bgscenery.png" class="cenario" alt="Cenario" />
+      <img
+        src="/images/pointer.png"
+        class="finishpointer"
+        alt="Missão Completa"
+      />
+      <img src="/images/stake1.png" class="stake1" alt="Poste Direito" />
+      <img src="/images/stake2.png" class="stake2" alt="Poste Esquerdo" />
+      <img
+        src="/images/curseclear.png"
+        class="curseclear"
+        alt="Missão Completada"
+      />
+      <span class="checkpointclear">0</span>
+      <img
+        src="/images/curseclearbonus.png"
+        class="curseclearbonus"
+        alt="Bonus Missao Completada"
+      />
+      <img src="/images/kooparedl.gif" class="koopared" alt="Koopa Vermelho" />
+      <img src="/images/kooparedl.gif" class="koopared2" alt="Koopa Vermelho" />
+      <img
+        src="/images/kooparedll.gif"
+        class="koopared3"
+        alt="Koopa Vermelho"
+      />
+      <img src="/images/koopagreen.gif" class="koopagreen" alt="Koopa Verde" />
+      <img src="/images/koopagreen.gif" class="koopagreen2" alt="Koopa Verde" />
+      <img
+        src="/images/koopagreenl.gif"
+        class="koopagreen3"
+        alt="Koopa Verde"
+      />
+      <img
+        src="/images/chuckfootbalright.gif"
+        class="chuck-footbal"
+        alt="Chuck Futebol"
+      />
+      <img
+        src="/images/chuckfootballeft.gif"
+        class="chuck-footbal2"
+        alt="Chuck Futebol"
+      />
+      <img
+        src="/images/chuckfootbalup.gif"
+        class="chuckfootbalup"
+        alt="Chuck Futebol Up"
+      />
+      <img src="/images/pipe.png" class="pipe" alt="Tubo" />
+      <img src="/images/pipe.png" class="pipe2" alt="Tubo" />
+      <img
+        src="/images/lifeup.png"
+        id="vidaextra-img"
+        class="hidden"
+        alt="Imagem vida Extra"
+      />
+      <img
+        src="/images/collectcoin.png"
+        id="collectcoin"
+        class="hidden"
+        alt="Ponto Moeda"
+      />
+      <img
+        src="/images/collectall.png"
+        id="collectall"
+        class="oculto"
+        alt="Pontos Todos Moedas"
+      />
+      <img src="/images/cascodoido.gif" class="cascodoido" alt="Casco doido" />
+      <img
+        src="/images/superkoopaflashingflyingl.gif"
+        class="superkoopa"
+        alt="Super koopa"
+      />
+      <img src="/images/rexl.gif" class="rexl" alt="Rex" />
+      <img src="/images/blocoex.png" class="bloco" alt="Blocos" />
+      <img src="/images/blocoex.png" class="bloco1" alt="Blocos" />
+      <img src="/images/blocoex.png" class="bloco2" alt="Blocos" />
+      <img src="/images/blocoex.png" class="bloco3" alt="Blocos" />
+      <img src="/images/yoshicoin.gif" class="yoshicoin" alt="Moeda Yoshi" />
+      <img src="/images/yoshicoin.gif" class="yoshicoin2" alt="Moeda Yoshi" />
+      <img src="/images/yoshicoin.gif" class="yoshicoin3" alt="Moeda Yoshi" />
+      <img src="/images/yoshicoin.gif" class="yoshicoin4" alt="Moeda Yoshi" />
+      <img src="/images/yoshicoin.gif" class="yoshicoin5" alt="Moeda Yoshi" />
+      <img src="/images/cascored.png" class="cascored" alt="Casco Vermelho" />
+
+      <img src="/images/coins.gif" class="coin1" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin2" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin3" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin4" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin5" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin6" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin7" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin8" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin9" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin10" alt="Moeda" />
+
+      <img src="/images/coins.gif" class="coin11" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin12" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin13" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin14" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin15" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin16" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin17" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin18" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin19" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin20" alt="Moeda" />
+
+      <img src="/images/coins.gif" class="coin21" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin22" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin23" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin24" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin25" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin26" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin27" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin28" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin29" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin30" alt="Moeda" />
+
+      <img src="/images/coins.gif" class="coin31" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin32" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin33" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin34" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin35" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin36" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin37" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin38" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin39" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin40" alt="Moeda" />
+
+      <img src="/images/coins.gif" class="coin41" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin42" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin43" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin44" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin45" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin46" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin47" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin48" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin49" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin50" alt="Moeda" />
+
+      <img src="/images/coins.gif" class="coin51" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin52" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin53" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin54" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin55" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin56" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin57" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin58" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin59" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin60" alt="Moeda" />
+
+      <img src="/images/coins.gif" class="coin61" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin62" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin63" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin64" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin65" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin66" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin67" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin68" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin69" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin70" alt="Moeda" />
+
+      <img src="/images/coins.gif" class="coin71" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin72" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin73" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin74" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin75" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin76" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin77" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin78" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin79" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin80" alt="Moeda" />
+
+      <img src="/images/coins.gif" class="coin81" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin82" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin83" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin84" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin85" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin86" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin87" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin88" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin89" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin90" alt="Moeda" />
+
+      <img src="/images/coins.gif" class="coin91" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin92" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin93" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin94" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin95" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin96" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin97" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin98" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin99" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin100" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin101" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin102" alt="Moeda" />
+      <img src="/images/coins.gif" class="coin103" alt="Moeda" />
+    </div>
+
+    <div id="container-game-footer">
+      <p>
+        Game Desenvolvido por <span>Johnny Peffer</span> para mais informacoes
+        acesse o
+        <a href="https://www.youtube.com/@johnnypefferoficial/" target="_blank"
+          >Canal do Youtube Oficial</a
+        >
+      </p>
+    </div>
+
+    <script src="/js/game.js" defer></script>
+  </body>
+</html>

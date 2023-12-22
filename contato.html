@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/css/style-contato.css" />
+    <title>Contato - Sobre o Jogo - Super Mario World</title>
+  </head>
+
+  <body>
+    <nav id="menu">
+      <a href="/index.html"
+        ><img src="/images/logo.png" class="logo" alt="Logo"
+      /></a>
+      <ul>
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+        <li><a href="/contato.html">Contato</a></li>
+        <li><a href="/informacoes.html">Info</a></li>
+        <li><a href="/comojogar.html">Como Jogar</a></li>
+        <li><a href="/desenvolvidor.html">Area do Desenvolvidor</a></li>
+      </ul>
+    </nav>
+
+    <div id="container-contato">
+      <div class="titulo">
+        <h2>Entre em Contato</h2>
+      </div>
+      <div class="contato-formulario">
+        <form class="formulario">
+          <div>
+            <label for="nome">Nome:</label>
+            <input
+              type="text"
+              placeholder="Digite seu Nome"
+              id="nome"
+              name="nome"
+              required
+            />
+          </div>
+          <div>
+            <label for="sobrenome">Sobrenome:</label>
+            <input
+              type="text"
+              placeholder="Digite seu Sobrenome"
+              id="sobrenome"
+              name="sobrenome"
+              required
+            />
+          </div>
+          <div>
+            <label for="email">E-mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Digite seu email aqui"
+              required
+            />
+          </div>
+          <div>
+            <label for="telefone">Telefone:</label>
+            <input
+              type="tel"
+              placeholder="(99) 99999-9999"
+              id="telefone"
+              name="telefone"
+              required
+              pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}$"
+            />
+          </div>
+          <div>
+            <label for="checkbox" class="labelcheckbox"
+              >Aceito Enviar meus Dados</label
+            >
+            <input
+              type="checkbox"
+              id="checkbox"
+              name="checkbox"
+              checked
+              class="inputcheckbox"
+              required
+            />
+          </div>
+          <button type="submit" onclick="enviarMensagem()">
+            Enviar Mensagem
+          </button>
+        </form>
+      </div>
+      <div id="mensagem"></div>
+      <audio class="sendmessage">
+        <source src="/soundtracks/checkpoint.wav" type="audio/wav" />
+      </audio>
+    </div>
+
+    <div id="container-contato-footer">
+      <p>
+        Game Desenvolvido por <span>Johnny Peffer</span> para mais informacoes
+        acesse o
+        <a href="https://www.youtube.com/@johnnypefferoficial/" target="_blank"
+          >Canal do Youtube Oficial</a
+        >
+      </p>
+    </div>
+
+    <script src="/js/contato.js" defer></script>
+  </body>
+</html>

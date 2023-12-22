@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/css/style-inicio.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <title>Super Mario World Web Game</title>
+  </head>
+
+  <body>
+    <audio id="pressstart">
+      <source src="/soundtracks/coin.wav" type="audio/wav" />
+    </audio>
+
+    <nav id="menu">
+      <a href="/index.html"
+        ><img src="/images/logo.png" class="logo" alt="Logo"
+      /></a>
+      <ul>
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+        <li><a href="/contato.html">Contato</a></li>
+        <li><a href="/informacoes.html">Info</a></li>
+        <li><a href="/comojogar.html">Como Jogar</a></li>
+        <li><a href="/desenvolvidor.html">Area do Desenvolvidor</a></li>
+      </ul>
+    </nav>
+
+    <div id="container">
+      <video class="playtheme" autoplay loop>
+        <source src="/movies/theme.mp4" type="video/mp4" />
+      </video>
+
+      <a href="#" class="startplayer">Press Start</a>
+      <div class="playerone hidden">1 &nbsp;PLAYER&nbsp; GAME</div>
+      <div class="playertwo hidden">2 &nbsp;PLAYER&nbsp; GAME</div>
+    </div>
+
+    <script src="/js/inicio.js" defer></script>
+  </body>
+</html>
