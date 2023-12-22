@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "Super-Mario-World";
+  src: url(/fonts/SuperMarioWorldTextBoxRegular-Y86j.ttf) format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Super-Mario-World", sans-serif;
+}
+
+body,
+html {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* background: linear-gradient(#467ef8, #ffffff); */
+  background-image: url(/images/imagebg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.logo {
+  position: absolute;
+  width: 130px;
+  left: 50px;
+  padding: 0;
+  top: 5px;
+}
+
+#menu {
+  position: relative;
+  background: #000;
+  text-align: center;
+}
+
+#menu ul li {
+  display: inline;
+}
+
+#menu ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 15px;
+  color: #fff;
+  transition: 500ms background;
+}
+
+#menu ul li:last-child a {
+  float: right;
+}
+
+#menu ul li a:hover {
+  background: #fff;
+  color: #000;
+}
+
+#container-contato {
+  position: relative;
+  width: 800px;
+  height: 546px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#container-contato .contato-formulario {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 500px;
+  border: 1px solid #fff;
+  padding: 10px 0;
+}
+
+#container-contato .contato-formulario .formulario .inputcheckbox {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-top: -12px;
+}
+
+#container-contato .contato-formulario .formulario .labelcheckbox {
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+}
+
+#container-contato .titulo {
+  position: relative;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container-contato .contato-formulario .formulario label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#container-contato .contato-formulario .formulario input {
+  color: #ff0000;
+  outline: none;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 5px 20px;
+}
+
+#container-contato .contato-formulario .formulario button {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px 40px;
+  margin-top: 5px;
+}
+
+#container-contato-footer {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #000;
+  padding: 20px;
+}
+
+#container-contato .pone,
+.ptwo,
+.ptree {
+  font-size: 12px;
+  color: #000000;
+}
+
+#mensagem {
+  display: none;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#container-contato-footer p {
+  color: #ffffff;
+}
+
+#container-contato-footer p span {
+  color: #00ff2a;
+}
+
+#container-contato-footer p a {
+  color: #00ff2a;
+  text-decoration: none;
+}
+
+#container-contato-footer p a:hover {
+  text-decoration: underline;
+  color: #f11c1c;
+  animation: site-oficial 1s infinite linear;
+}
+
+@keyframes site-oficial {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

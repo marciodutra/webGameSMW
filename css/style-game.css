@@ -1,0 +1,2066 @@
+@font-face {
+  font-family: "Super-Mario-World";
+  src: url(/fonts/SuperMarioWorldTextBoxRegular-Y86j.ttf) format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Super-Mario-World", sans-serif;
+}
+
+body,
+html {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+.logo {
+  position: absolute;
+  width: 130px;
+  left: 50px;
+  padding: 0;
+  top: 5px;
+}
+
+#botao {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 150px;
+  z-index: 95;
+}
+
+#botao button {
+  position: absolute;
+  top: 220px;
+  left: 600px;
+  width: 100%;
+  padding: 5px 5px;
+  cursor: pointer;
+}
+
+#menu {
+  position: relative;
+  background: #000;
+  text-align: center;
+  z-index: 999;
+}
+
+#menu ul li {
+  display: inline;
+}
+
+#menu ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 15px;
+  color: #fff;
+  transition: 500ms background;
+}
+
+#menu ul li:last-child a {
+  float: right;
+}
+
+#menu ul li a:hover {
+  background: #fff;
+  color: #000;
+}
+
+#container-game {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  z-index: 95;
+  background-color: #000;
+}
+
+#container-game .cenario {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 900px;
+  z-index: 90;
+}
+
+#container-game .senario {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 900px;
+  z-index: 90;
+}
+
+#container-game .cascored {
+  position: absolute;
+  z-index: 95;
+  bottom: 96px;
+  width: 38px;
+  display: none;
+}
+
+.cascored-left-animation {
+  animation: cascored-left-animation 3s linear forwards;
+}
+
+@keyframes cascored-left-animation {
+  from {
+    left: 400px;
+    display: block;
+  }
+  to {
+    left: 110%;
+    display: none;
+  }
+}
+
+.cascored-right-animation {
+  animation: cascored-right-animation 5s linear forwards;
+}
+
+@keyframes cascored-right-animation {
+  from {
+    left: 300px;
+    display: block;
+  }
+  to {
+    left: -110%;
+    display: none;
+  }
+}
+
+#container-game .bloco {
+  position: absolute;
+  z-index: 95;
+  width: 40px;
+  bottom: 220px;
+  display: none;
+}
+
+#container-game .bloco1 {
+  position: absolute;
+  z-index: 95;
+  width: 40px;
+  bottom: 220px;
+  display: none;
+}
+
+#container-game .bloco2 {
+  position: absolute;
+  z-index: 95;
+  width: 40px;
+  bottom: 220px;
+  display: none;
+}
+
+#container-game .bloco3 {
+  position: absolute;
+  z-index: 95;
+  width: 40px;
+  bottom: 220px;
+  display: none;
+}
+
+#container-game .stake1 {
+  position: absolute;
+  z-index: 94;
+  bottom: 100px;
+  width: 35px;
+  height: 300px;
+  display: none;
+}
+
+#container-game .stake2 {
+  position: absolute;
+  z-index: 99;
+  bottom: 100px;
+  width: 35px;
+  height: 300px;
+  display: none;
+}
+
+#container-game .finishpointer {
+  position: absolute;
+  z-index: 95;
+  width: 70px;
+  top: 300px;
+  display: none;
+}
+
+#container-game .checkpointclear:nth-of-type(1) {
+  position: absolute;
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 297px;
+  margin-left: 850px;
+  color: #fff;
+  display: none;
+  z-index: 95;
+}
+
+.animate-clearmission {
+  animation: clearmission 3s ease-in-out infinite alternate;
+}
+
+@keyframes clearmission {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(120px);
+  }
+}
+
+#container-game .menuitens .cursemario {
+  position: absolute;
+  width: 600px;
+  height: 70px;
+  margin-left: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 999;
+}
+
+#container-game .menuitens .timer {
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 774px;
+  color: #ffdf73;
+  z-index: 999;
+}
+
+#container-game .menuitens .life {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 38px;
+  margin-left: 474px;
+  color: #fff;
+  z-index: 999;
+}
+
+#container-game .menuitens .points {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 38px;
+  margin-left: 935px;
+  color: #fff;
+  z-index: 999;
+}
+
+#container-game .menuitens .moedasup {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-left: 935px;
+  color: #fff;
+  z-index: 999;
+}
+
+#container-game .yoshicoin {
+  position: absolute;
+  z-index: 95;
+  width: 40px;
+  bottom: 200px;
+  display: none;
+}
+
+#container-game .yoshicoin2 {
+  position: absolute;
+  z-index: 95;
+  width: 40px;
+  bottom: 200px;
+  display: none;
+}
+
+#container-game .yoshicoin3 {
+  position: absolute;
+  z-index: 95;
+  width: 40px;
+  bottom: 200px;
+  display: none;
+}
+
+#container-game .yoshicoin4 {
+  position: absolute;
+  z-index: 95;
+  width: 40px;
+  bottom: 200px;
+  display: none;
+}
+
+#container-game .yoshicoin5 {
+  position: absolute;
+  z-index: 95;
+  width: 40px;
+  bottom: 200px;
+  display: none;
+}
+
+#container-game .coin1 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin2 {
+  position: absolute;
+  width: 20px;
+  bottom: 200px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin3 {
+  position: absolute;
+  width: 20px;
+  bottom: 200px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin4 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin5 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+#container-game .coin6 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin7 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin8 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin9 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin10 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin11 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin12 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin13 {
+  position: absolute;
+  width: 20px;
+  bottom: 200px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin14 {
+  position: absolute;
+  width: 20px;
+  bottom: 200px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin15 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin16 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin17 {
+  position: absolute;
+  width: 20px;
+  bottom: 150px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin18 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin19 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin20 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin21 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin22 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin23 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin24 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin25 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin26 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin27 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin28 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin29 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin30 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin31 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin32 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin33 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin34 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin35 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin36 {
+  position: absolute;
+  width: 20px;
+  bottom: 195px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin37 {
+  position: absolute;
+  width: 20px;
+  bottom: 195px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin38 {
+  position: absolute;
+  width: 20px;
+  bottom: 200px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin39 {
+  position: absolute;
+  width: 20px;
+  bottom: 200px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin40 {
+  position: absolute;
+  width: 20px;
+  bottom: 195px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin41 {
+  position: absolute;
+  width: 20px;
+  bottom: 195px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin42 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin43 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin44 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin45 {
+  position: absolute;
+  width: 20px;
+  bottom: 195px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin46 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin47 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin48 {
+  position: absolute;
+  width: 20px;
+  bottom: 195px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin49 {
+  position: absolute;
+  width: 20px;
+  bottom: 195px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin50 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin51 {
+  position: absolute;
+  width: 20px;
+  bottom: 210px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin52 {
+  position: absolute;
+  width: 20px;
+  bottom: 195px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin53 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin54 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin55 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin56 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin57 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin58 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin59 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin60 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin61 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin62 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin63 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin64 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin65 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin66 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin67 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin68 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin69 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin70 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin71 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin72 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin73 {
+  position: absolute;
+  width: 20px;
+  bottom: 215px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin74 {
+  position: absolute;
+  width: 20px;
+  bottom: 185px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin75 {
+  position: absolute;
+  width: 20px;
+  bottom: 185px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin76 {
+  position: absolute;
+  width: 20px;
+  bottom: 185px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin77 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin78 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin79 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin80 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin81 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin82 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin83 {
+  position: absolute;
+  width: 20px;
+  bottom: 170px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin84 {
+  position: absolute;
+  width: 20px;
+  bottom: 170px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin85 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin86 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin87 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin88 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin89 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin90 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin91 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin92 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin93 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin94 {
+  position: absolute;
+  width: 20px;
+  bottom: 180px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin95 {
+  position: absolute;
+  width: 20px;
+  bottom: 190px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin96 {
+  position: absolute;
+  width: 20px;
+  bottom: 190px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin97 {
+  position: absolute;
+  width: 20px;
+  bottom: 200px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin98 {
+  position: absolute;
+  width: 20px;
+  bottom: 200px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin99 {
+  position: absolute;
+  width: 20px;
+  bottom: 200px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin100 {
+  position: absolute;
+  width: 20px;
+  bottom: 200px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin101 {
+  position: absolute;
+  width: 20px;
+  bottom: 200px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin102 {
+  position: absolute;
+  width: 20px;
+  bottom: 200px;
+  display: none;
+  z-index: 97;
+}
+
+#container-game .coin103-start {
+  animation: coin103-animation 15s infinite linear forwards;
+  animation-delay: 400s;
+}
+
+#container-game .coin103 {
+  position: absolute;
+  width: 20px;
+  margin-left: 690px;
+  margin-top: 20px;
+  z-index: 97;
+  display: none;
+}
+
+@keyframes coin103-animation {
+  from {
+    margin-top: 20px;
+  }
+
+  to {
+    margin-top: 825px;
+    bottom: 96px;
+  }
+}
+
+#container-game .menuitens .yoshiup {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 16px;
+  margin-left: 540px;
+  color: transparent;
+  z-index: 95;
+}
+
+#container-game .menuitens .checkpointclear {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 25px;
+  margin-left: 625px;
+  color: #fff;
+  z-index: 95;
+}
+
+/* .mario-voo {
+    animation: voando 10s;
+  }
+
+@keyframes voando {
+    0% {
+      bottom: 45px;
+      transform: translateX(0);
+    }
+    50% {
+      bottom: 60%;
+      transform: translateX(100px);
+    }
+    100% {
+      bottom: 45px;
+      transform: translateX(0);
+    }
+  } */
+
+#container-game .mario {
+  position: absolute;
+  z-index: 98;
+  bottom: 98px;
+  width: 35px;
+  left: 100px;
+}
+
+#container-game .jumping {
+  animation: mario-jumping 500ms ease-out;
+}
+
+@keyframes mario-jumping {
+  0% {
+    bottom: 98px;
+  }
+
+  55% {
+    bottom: 180px;
+  }
+
+  60% {
+    bottom: 180px;
+  }
+
+  65% {
+    bottom: 180px;
+  }
+
+  70% {
+    bottom: 180px;
+  }
+
+  75% {
+    bottom: 180px;
+  }
+
+  100% {
+    bottom: 98px;
+  }
+}
+
+#container-game .mario-voando-start {
+  animation: mario-voando 25s linear;
+  animation-delay: 60s;
+}
+
+#container-game .mario-voando {
+  position: absolute;
+  width: 81px;
+  top: 180px;
+  left: -100px;
+  z-index: 95;
+}
+
+@keyframes mario-voando {
+  from {
+    left: -100px;
+  }
+
+  to {
+    left: 110%;
+  }
+}
+
+#container-game .pipe {
+  position: absolute;
+  width: 120px;
+  height: 70px;
+  bottom: 100px;
+  z-index: 94;
+  display: none;
+}
+
+#container-game .pipe2 {
+  position: absolute;
+  width: 120px;
+  height: 70px;
+  bottom: 100px;
+  z-index: 94;
+  display: none;
+}
+
+#container-game .chuck-footbal2 {
+  position: absolute;
+  bottom: 98px;
+  width: 60px;
+  height: 50px;
+  margin-left: -100px;
+  z-index: 98;
+}
+
+#container-game .chuck-footbal2-start {
+  animation: chuck2-animation 25s infinite linear;
+  animation-delay: 299s;
+}
+
+@keyframes chuck2-animation {
+  from {
+    left: -100px;
+  }
+
+  to {
+    left: 110%;
+  }
+}
+
+#container-game .chuck-footbal {
+  position: absolute;
+  bottom: 98px;
+  width: 60px;
+  height: 50px;
+  margin-left: -100px;
+  z-index: 98;
+}
+
+#container-game .chuck-footbal-start {
+  animation: chuck-animation 25s infinite linear;
+  animation-delay: 349s;
+}
+
+@keyframes chuck-animation {
+  from {
+    right: -100px;
+  }
+
+  to {
+    right: 110%;
+  }
+}
+
+#container-game .chuckfootbalup {
+  position: absolute;
+  bottom: 96px;
+  width: 80px;
+  height: 50px;
+  z-index: 98;
+  display: none;
+}
+
+#container-game .rouletteblock {
+  position: absolute;
+  width: 50px;
+  height: 37px;
+  margin-left: 673.5px;
+  margin-top: 15.5px;
+  z-index: 998;
+  border-radius: 10px;
+  opacity: 1;
+  display: none;
+}
+
+#container-game .power-up-start {
+  animation: powerup-animation 2s forwards,
+    powerup infinite 500ms linear forwards;
+}
+
+#container-game .power-up {
+  position: absolute;
+  width: 42px;
+  height: 30px;
+  top: 280px;
+  z-index: 93;
+  display: none;
+}
+
+@keyframes powerup-animation {
+  0% {
+    top: 280px;
+  }
+  10%,
+  20%,
+  30%,
+  40% {
+    top: 252px;
+  }
+  50% {
+    top: 252px;
+    margin-right: -40px;
+  }
+  100% {
+    top: 412px;
+    margin-right: -40px;
+  }
+}
+
+@keyframes powerup {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#container-game .flower-start {
+  animation: flower-animation 3s linear forwards,
+    flower-waiting 500ms infinite linear;
+}
+
+#container-game .flower {
+  position: absolute;
+  width: 35px;
+  height: 21px;
+  top: 280px;
+  z-index: 93;
+  display: none;
+}
+
+/* @keyframes flower-animation {
+  from {
+    top: 280px;
+  }
+
+  to {
+    top: 258px;
+  }
+} */
+
+@keyframes flower-animation {
+  0% {
+    top: 270px;
+  }
+  10%,
+  20%,
+  30%,
+  40% {
+    top: 252px;
+  }
+  50% {
+    top: 252px;
+    margin-right: -40px;
+  }
+  100% {
+    top: 422px;
+    margin-right: -40px;
+  }
+}
+
+@keyframes flower-waiting {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#container-game .feather-start {
+  animation: feather-animation 3s linear, feather-waiting 500ms infinite linear,
+    feather1-animation 5s linear forwards;
+}
+
+#container-game .feather {
+  position: absolute;
+  width: 35px;
+  height: 21px;
+  top: 280px;
+  z-index: 93;
+  display: none;
+}
+
+@keyframes feather-animation {
+  0% {
+    top: 280px;
+  }
+  30% {
+    top: 172px;
+  }
+  100% {
+    top: 280px;
+  }
+}
+
+@keyframes feather1-animation {
+  50% {
+    top: 282px;
+  }
+
+  100% {
+    top: 418px;
+  }
+}
+
+@keyframes feather-waiting {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#container-game .star-start {
+  animation: invencivel-animation 15s infinite linear;
+  animation-delay: 400s;
+}
+
+#container-game .star {
+  position: absolute;
+  width: 40px;
+  height: 22px;
+  margin-left: 680px;
+  margin-top: 20px;
+  z-index: 95;
+  display: none;
+}
+
+@keyframes invencivel-animation {
+  from {
+    margin-top: 20px;
+  }
+
+  to {
+    margin-top: 825px;
+    bottom: 98px;
+  }
+}
+
+.mario-invencible {
+  animation: mario-invencible 400ms infinite linear;
+}
+
+@keyframes mario-invencible {
+  from {
+    opacity: 0;
+    filter: brightness(1%);
+  }
+  to {
+    opacity: 1;
+    filter: brightness(300%);
+  }
+}
+
+#container-game .extra-up-start {
+  animation: extraup-animation 3s forwards, extraup 500ms infinite linear;
+}
+
+#container-game .extra-up {
+  position: absolute;
+  width: 42px;
+  height: 30px;
+  top: 200px;
+  opacity: 0;
+  z-index: 93;
+  display: none;
+}
+
+@keyframes extraup-animation {
+  0% {
+    top: 270px;
+  }
+  10%,
+  20%,
+  30%,
+  40% {
+    top: 252px;
+  }
+  50% {
+    top: 252px;
+    margin-right: -40px;
+  }
+  100% {
+    top: 412px;
+    margin-right: -40px;
+  }
+}
+
+@keyframes extraup {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.oculto {
+  display: none;
+  position: absolute;
+  width: 40px;
+}
+
+.hidden {
+  display: none;
+  position: absolute;
+  width: 28px;
+}
+
+.collectc {
+  animation: collectc 500ms forwards;
+}
+
+@keyframes collectc {
+  from {
+    bottom: 98px;
+  }
+  to {
+    bottom: 200px;
+  }
+}
+
+.vidaextraup {
+  animation: vidaextraup 500ms forwards;
+}
+
+@keyframes vidaextraup {
+  from {
+    bottom: 98px;
+  }
+  to {
+    bottom: 200px;
+  }
+}
+
+@keyframes cascodoido-animation {
+  from {
+    right: -45px;
+  }
+
+  to {
+    right: 70%;
+  }
+}
+
+@keyframes superkoopa-animation {
+  from {
+    right: -45px;
+  }
+
+  to {
+    right: 110%;
+  }
+}
+
+#container-game .cascodoido-start {
+  animation: cascodoido-animation 7s infinite linear alternate;
+  animation-delay: 320s;
+}
+
+#container-game .superkoopa-start {
+  animation: superkoopa-animation 15s linear infinite;
+  animation-delay: 275s;
+}
+
+#container-game .cascodoido {
+  position: absolute;
+  bottom: 98px;
+  width: 30px;
+  margin-left: -45px;
+  z-index: 97;
+}
+
+#container-game .superkoopa {
+  position: absolute;
+  bottom: 110px;
+  width: 30px;
+  margin-left: -45px;
+  z-index: 97;
+}
+
+#container-game .koopared-start {
+  animation: koopared-animation 15s infinite linear;
+  animation-delay: 6s;
+}
+
+#container-game .koopared2-start {
+  animation: koopared2-animation 15s infinite linear;
+  animation-delay: 16s;
+}
+
+#container-game .koopared3-start {
+  animation: koopared3-animation 15s infinite linear;
+  animation-delay: 7s;
+}
+
+#container-game .koopared {
+  position: absolute;
+  bottom: 98px;
+  width: 45px;
+  height: 35px;
+  margin-left: -45px;
+  z-index: 98;
+}
+
+#container-game .koopared2 {
+  position: absolute;
+  bottom: 98px;
+  width: 45px;
+  height: 35px;
+  margin-left: -45px;
+  z-index: 98;
+}
+
+#container-game .koopared3 {
+  position: absolute;
+  bottom: 98px;
+  width: 45px;
+  height: 35px;
+  margin-left: -45px;
+  z-index: 98;
+}
+
+@keyframes koopared-animation {
+  from {
+    right: -45px;
+  }
+
+  to {
+    right: 110%;
+  }
+}
+
+@keyframes koopared2-animation {
+  from {
+    right: -45px;
+  }
+
+  to {
+    right: 110%;
+  }
+}
+
+@keyframes koopared3-animation {
+  from {
+    left: -45px;
+  }
+
+  to {
+    left: 110%;
+  }
+}
+
+#container-game .koopagreen {
+  position: absolute;
+  bottom: 98px;
+  width: 45px;
+  height: 35px;
+  margin-left: -45px;
+  z-index: 98;
+}
+
+#container-game .koopagreen2 {
+  position: absolute;
+  bottom: 98px;
+  width: 45px;
+  height: 35px;
+  margin-left: -45px;
+  z-index: 98;
+}
+
+#container-game .koopagreen3 {
+  position: absolute;
+  bottom: 98px;
+  width: 45px;
+  height: 35px;
+  margin-left: -45px;
+  z-index: 98;
+}
+
+#container-game .koopagreen-start {
+  animation: koopagreen-animation 15s infinite linear;
+  animation-delay: 400s;
+}
+
+#container-game .koopagreen2-start {
+  animation: koopagreen2-animation 15s infinite linear;
+  animation-delay: 400s;
+}
+
+#container-game .koopagreen3-start {
+  animation: koopagreen3-animation 15s infinite linear;
+  animation-delay: 400s;
+}
+
+@keyframes koopagreen-animation {
+  from {
+    right: -45px;
+  }
+
+  to {
+    right: 110%;
+  }
+}
+
+@keyframes koopagreen2-animation {
+  from {
+    right: -45px;
+  }
+
+  to {
+    right: 110%;
+  }
+}
+
+@keyframes koopagreen3-animation {
+  from {
+    left: -45px;
+  }
+
+  to {
+    left: 110%;
+  }
+}
+
+#container-game .rexl-start {
+  animation: rexl-animation 40s infinite linear;
+  animation-delay: 350s;
+}
+
+#container-game .rexl {
+  position: absolute;
+  width: 30px;
+  bottom: 98px;
+  margin-left: -45px;
+  z-index: 97;
+}
+
+@keyframes rexl-animation {
+  from {
+    right: -45px;
+  }
+
+  to {
+    right: 110%;
+  }
+}
+
+.gameovertimeup {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 9999;
+  animation: fundo 1s forwards;
+  display: none;
+}
+
+@keyframes fundo {
+  from {
+    filter: blur(8px);
+  }
+  to {
+    background: #000;
+  }
+}
+
+.left-image {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: -50%;
+  animation: slide-in-left 1s linear forwards;
+  animation-delay: 1.5s;
+  display: none;
+  z-index: 9999;
+}
+
+.right-image {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: -50%;
+  animation: slide-in-right 1s linear forwards;
+  animation-delay: 1.5s;
+  display: none;
+  z-index: 9999;
+}
+
+@keyframes slide-in-left {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide-in-right {
+  100% {
+    right: 0;
+  }
+}
+
+.timeup-left-image {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: -50%;
+  animation: slide-in-left 1s linear forwards;
+  animation-delay: 1.5s;
+  display: none;
+  z-index: 9999;
+}
+
+.timeup-right-image {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: -50%;
+  animation: slide-in-right 1s linear forwards;
+  animation-delay: 1.5s;
+  display: none;
+  z-index: 9999;
+}
+
+#result {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 9999;
+  animation: fundo 1s forwards;
+  display: none;
+}
+
+.clearmission-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: slide-in-right 1s linear forwards;
+  animation-delay: 1.5s;
+  display: none;
+  z-index: 9999;
+}
+
+#container-game .curseclear {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 100px;
+  transform: translate(50%, 50%);
+  z-index: 99;
+}
+
+#container-game .curseclearbonus {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 250px 250px;
+  transform: translate(50%, 50%);
+  z-index: 99;
+}
+
+.piranha-start {
+  animation: piranha-animation 5s infinite alternate;
+}
+
+#container-game .piranha {
+  position: absolute;
+  width: 20px;
+  bottom: 100px;
+  z-index: 95;
+  display: none;
+}
+
+@keyframes piranha-animation {
+  from {
+    bottom: 200px;
+  }
+
+  to {
+    bottom: 100px;
+  }
+}
+
+.piranha-start2 {
+  animation: piranha2-animation 5s infinite alternate;
+}
+
+#container-game .piranha2 {
+  position: absolute;
+  width: 20px;
+  bottom: 100px;
+  z-index: 95;
+  display: none;
+}
+
+@keyframes piranha2-animation {
+  from {
+    bottom: 200px;
+  }
+
+  to {
+    bottom: 100px;
+  }
+}
+
+.colision-animation {
+  animation: colision-animation 3s forwards;
+}
+
+@keyframes colision-animation {
+  0% {
+    bottom: 98px;
+  }
+
+  90% {
+    bottom: 150px;
+  }
+
+  100% {
+    bottom: -500px;
+  }
+}
+
+.mission-animation {
+  animation: missionclear-animation 8s linear forwards;
+}
+
+@keyframes missionclear-animation {
+  from {
+    margin-right: 800px;
+  }
+  to {
+    margin-left: 600px;
+  }
+}
+
+#container-game-footer {
+  position: relative;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #000;
+  padding: 20px;
+  z-index: 999;
+}
+
+#container-game-footer p {
+  color: #ffffff;
+}
+
+#container-game-footer p span {
+  color: #00ff2a;
+}
+
+#container-game-footer p a {
+  color: #00ff2a;
+  text-decoration: none;
+}
+
+#container-game-footer p a:hover {
+  text-decoration: underline;
+  color: #f11c1c;
+  animation: site-oficial 1s infinite linear;
+}
+
+@keyframes site-oficial {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

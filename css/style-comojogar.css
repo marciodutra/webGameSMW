@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "Super-Mario-World";
+  src: url(/fonts/SuperMarioWorldTextBoxRegular-Y86j.ttf) format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Super-Mario-World", sans-serif;
+}
+
+body,
+html {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.logo {
+  position: absolute;
+  width: 130px;
+  left: 50px;
+  padding: 0;
+  top: 5px;
+}
+
+#botao {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 150px;
+}
+
+#botao button {
+  position: absolute;
+  top: 220px;
+  left: 600px;
+  width: 100%;
+  padding: 5px 5px;
+}
+
+#menu {
+  position: relative;
+  background: #000;
+  text-align: center;
+}
+
+#menu ul li {
+  display: inline;
+}
+
+#menu ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 15px;
+  color: #fff;
+  transition: 500ms background;
+}
+
+#menu ul li:last-child a {
+  float: right;
+}
+
+#menu ul li a:hover {
+  background: #fff;
+  color: #000;
+}
+
+#container-comojogar {
+  position: relative;
+  width: 100vw;
+  height: 546px;
+  margin: 0 auto;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* background: linear-gradient(#467ef8, #ffffff); */
+  background-image: url(/images/imagebg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+#container-comojogar .container h2 {
+  font-size: 20px;
+  padding: 20px 0;
+  margin-top: -50px;
+}
+
+#container-comojogar .container h3 {
+  font-size: 13px;
+}
+
+#container-flex {
+  display: flex;
+  gap: 20px;
+}
+
+#container-comojogar .containera {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container-comojogar .containerb {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container-comojogar .containerc {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container-comojogar .containera .image1 {
+  position: absolute;
+  top: 170px;
+  width: 35px;
+}
+
+#container-comojogar .containera p {
+  margin-top: 100px;
+  font-size: 12px;
+}
+
+#container-comojogar .containerb .image2 {
+  position: absolute;
+  top: 170px;
+  width: 35px;
+}
+
+#container-comojogar .containerb p {
+  margin-top: 100px;
+  font-size: 12px;
+}
+
+#container-comojogar .containerc .image3 {
+  position: absolute;
+  top: 90px;
+  width: 140px;
+}
+
+#container-comojogar .containerc p {
+  margin-top: 100px;
+  font-size: 12px;
+}
+
+#container-comojogar .containeraa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  width: 600px;
+  margin-top: 80px;
+}
+
+#container-comojogar-footer {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #000;
+  padding: 20px;
+}
+
+#container-comojogar-footer p {
+  color: #ffffff;
+}
+
+#container-comojogar-footer p span {
+  color: #00ff2a;
+}
+
+#container-comojogar-footer p a {
+  color: #00ff2a;
+  text-decoration: none;
+}
+
+#container-comojogar-footer p a:hover {
+  text-decoration: underline;
+  color: #f11c1c;
+  animation: site-oficial 1s infinite linear;
+}
+
+@keyframes site-oficial {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

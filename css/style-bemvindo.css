@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "Super-Mario-World";
+  src: url(/fonts/SuperMarioWorldTextBoxRegular-Y86j.ttf) format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Super-Mario-World", sans-serif;
+}
+
+body,
+html {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background: #000;
+  overflow: hidden;
+}
+
+.logo {
+  position: absolute;
+  width: 130px;
+  left: 50px;
+  padding: 0;
+  top: 5px;
+}
+
+#menu {
+  position: relative;
+  background: #000;
+  text-align: center;
+}
+
+#menu ul li {
+  display: inline;
+}
+
+#menu ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 15px;
+  color: #fff;
+  transition: 500ms background;
+}
+
+#menu ul li:last-child a {
+  float: right;
+}
+
+#menu ul li a:hover {
+  background: #fff;
+  color: #000;
+}
+
+#container-welcome {
+  position: relative;
+  background-color: #000000;
+  background: url(/images/welcomesmw.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100vw;
+  min-height: 602px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: welcome-animation 1s ease-out;
+}
+
+@keyframes welcome-animation {
+  0% {
+    filter: blur(150px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.texto {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 820px;
+  height: 190px;
+  color: #fff;
+  background-color: #000;
+  margin-top: -160px;
+  font-size: 25px;
+}
+
+#container-welcome .startplayer {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000000;
+  margin-top: 100px;
+  animation: botao-animation 1s infinite;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 2s;
+}
+
+#container-welcome .startplayer:hover {
+  animation: none;
+  color: #020202;
+  text-decoration: underline;
+  transition: 2s;
+}
+
+@keyframes botao-animation {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0;
+  }
+}

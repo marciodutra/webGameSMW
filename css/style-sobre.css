@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Super-Mario-World";
+  src: url(/fonts/SuperMarioWorldTextBoxRegular-Y86j.ttf) format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Super-Mario-World", sans-serif;
+}
+
+body,
+html {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* background: linear-gradient(#467ef8, #ffffff); */
+  background-image: url(/images/imagebg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.logo {
+  position: absolute;
+  width: 130px;
+  left: 50px;
+  padding: 0;
+  top: 5px;
+}
+
+#menu {
+  position: relative;
+  background: #000;
+  text-align: center;
+}
+
+#menu ul li {
+  display: inline;
+}
+
+#menu ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 15px;
+  color: #fff;
+  transition: 500ms background;
+}
+
+#menu ul li:last-child a {
+  float: right;
+}
+
+#menu ul li a:hover {
+  background: #fff;
+  color: #000;
+}
+
+#container-sobre {
+  position: relative;
+  width: 800px;
+  height: 546px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  text-align: center;
+}
+
+#container-sobre-footer {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #000;
+  padding: 20px;
+}
+
+#container-sobre h2 {
+  font-size: 20px;
+}
+
+#container-sobre .pone,
+.ptwo,
+.ptree {
+  font-size: 12px;
+  color: #000000;
+}
+
+#container-sobre-footer p {
+  color: #ffffff;
+}
+
+#container-sobre-footer p span {
+  color: #00ff2a;
+}
+
+#container-sobre-footer p a {
+  color: #00ff2a;
+  text-decoration: none;
+}
+
+#container-sobre-footer p a:hover {
+  text-decoration: underline;
+  color: #f11c1c;
+  animation: site-oficial 1s infinite linear;
+}
+
+@keyframes site-oficial {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
